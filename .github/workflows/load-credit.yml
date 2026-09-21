@@ -2,8 +2,8 @@ name: Load Credit
 
 on:
   schedule:
-    # Credit loading daily at 7:05 AM UTC (10:05 AM Israel time) - avoid conflict with token refresh
-    - cron: "5 7 * * 0,1,2,3,4"
+    - cron: "17 10 * * 0-4"
+      timezone: "Asia/Jerusalem"
   workflow_dispatch: # Allow manual triggering
 
 # Prevent concurrent runs - only one token operation at a time
